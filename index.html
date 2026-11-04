@@ -80,12 +80,13 @@ code{font:500 .86em var(--mono);background:var(--chip);border:1px solid var(--ru
 .glance dd{font-size:15.5px;line-height:1.5;color:var(--ink)}
 /* cards */
 .cards{list-style:none;padding:0!important;display:grid;gap:14px}
-.card{position:relative;background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:24px 24px 10px 70px;margin:0!important}
+.sec .card{position:relative;background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:24px 24px 10px 70px;margin:0!important}
 .card .num{position:absolute;left:24px;top:26px;font:500 13px var(--mono);color:var(--accent-ink)}
 .card h3{font-size:18px;font-weight:600;line-height:1.35;margin-bottom:10px;color:var(--ink)}
 .card p,.card li{font-size:16px}
 /* diagram */
 .diagram{margin:28px 0 8px;background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:24px 16px 14px;overflow-x:auto}
+.diagram svg{max-width:100%!important;height:auto}
 .diagram pre.mermaid{font-family:var(--sans);display:flex;justify-content:center;min-height:120px;color:transparent}
 .diagram pre.mermaid[data-processed]{color:inherit}
 .diagram figcaption{font-size:12.5px;color:var(--ink-3);text-align:center;margin-top:10px}
@@ -121,7 +122,7 @@ footer a{color:var(--ink-2)}
   .bar nav a.hide-sm{display:none}
   .hero{padding:32px 0 28px}
   .glance{grid-template-columns:1fr}
-  .card{padding:20px 18px 6px 18px}
+  .sec .card{padding:20px 18px 6px 18px}
   .card .num{position:static;display:block;margin-bottom:6px}
   .sec{margin-bottom:56px}
 }
@@ -145,7 +146,7 @@ footer a{color:var(--ink-2)}
     <p class="summary">Full-stack product engineering for a U.S. platform that helps older adults and their families get their health, financial, and legal information organized.</p>
     <div class="actions">
       
-      <a class="btn" href="https://github.com/7pixel-cl/confidential-platform-showcase">View on GitHub</a>
+      <a class="btn primary" href="https://github.com/7pixel-cl/confidential-platform-showcase">View on GitHub</a>
     </div>
     <p class="note">The client, product name, screens, and source code are under NDA. This page describes my role and the engineering at a high level only. I’m happy to go deeper in a conversation, within what the NDA allows.</p>
   </section>
@@ -172,7 +173,7 @@ footer a{color:var(--ink-2)}
 <li><strong>Financial data features</strong> — flows that connect financial accounts through an aggregation API (sandbox personas for testing) and help users map where their money comes from and goes.</li>
 </ul>
 </section>
-<section id="architecture-high-level" class="sec"><h2>Architecture (high level)</h2><figure class="diagram"><pre class="mermaid">flowchart LR
+<section id="architecture-high-level" class="sec"><h2>Architecture (high level)</h2><figure class="diagram"><pre class="mermaid">flowchart TD
   U[&quot;Older adult / caregiver&lt;br/&gt;(web, mobile-ready)&quot;] --&gt; W[&quot;Next.js 15 app&lt;br/&gt;React 19 · Tailwind v4&quot;]
   W --&gt;|&quot;type-safe calls&quot;| API[&quot;tRPC v11 API&lt;br/&gt;Zod validation&quot;]
   API --&gt; AUTH[&quot;Auth with MFA&lt;br/&gt;(Better Auth)&quot;]
