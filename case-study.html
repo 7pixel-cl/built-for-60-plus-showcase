@@ -1,0 +1,274 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Confidential Project — Case Study</title><style>
+  :root {
+    --ink: #1a1d23;
+    --ink-soft: #4b5261;
+    --ink-faint: #8a90a0;
+    --paper: #fdfdfc;
+    --accent: #2456d6;
+    --accent-soft: #eef2fd;
+    --rule: #e6e7ea;
+    --callout-bg: #f6f7f9;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+  }
+
+  /* ---- Hero ---- */
+  .kicker {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: clamp(30px, 5vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    font-weight: 750;
+    margin-bottom: 20px;
+  }
+  .summary {
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    padding: 18px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 56px;
+    font-size: 14px;
+  }
+  .meta div { min-width: 120px; }
+  .meta dt {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 2px;
+  }
+  .meta dd { font-weight: 500; }
+
+  /* ---- Sections ---- */
+  h2 {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+    margin: 64px 0 16px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 650;
+    margin: 32px 0 10px;
+  }
+  p { margin-bottom: 18px; }
+  ul, ol { margin: 0 0 18px 22px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); }
+  strong { font-weight: 650; }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, "Cascadia Code", Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    background: var(--callout-bg);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1px 5px;
+  }
+  pre {
+    background: #14161b;
+    color: #e8eaf0;
+    border-radius: 10px;
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 0 0 24px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  pre code { background: none; border: none; padding: 0; color: inherit; }
+
+  blockquote {
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 20px;
+    margin: 0 0 24px;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  /* ---- Metrics callouts ---- */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px;
+    margin: 28px 0 36px;
+  }
+  .metric {
+    background: var(--accent-soft);
+    border: 1px solid #d6e0f8;
+    border-radius: 12px;
+    padding: 20px 18px;
+  }
+  .metric .value {
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .metric .label {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+  /* Use for unverified numbers awaiting the user: */
+  .metric.placeholder { background: #fdf6e7; border-color: #f0dfb2; }
+  .metric.placeholder .value { color: #a07708; }
+
+  /* ---- Figures / screenshot placeholders ---- */
+  figure { margin: 32px 0 36px; }
+  figure img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--rule);
+    display: block;
+  }
+  .img-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 240px;
+    border: 2px dashed #c9cdd6;
+    border-radius: 10px;
+    background: var(--callout-bg);
+    color: var(--ink-faint);
+    font-size: 14px;
+    padding: 24px;
+  }
+  figcaption {
+    font-size: 13.5px;
+    color: var(--ink-faint);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--ink-faint);
+  }
+
+  @media print {
+    main { padding: 24px; }
+    .img-placeholder { min-height: 120px; }
+  }
+
+.mermaid{background:var(--callout-bg);border:1px solid var(--rule);border-radius:10px;padding:16px;color:var(--ink);text-align:center;overflow-x:auto}
+table{border-collapse:collapse;width:100%;margin:0 0 24px;font-size:15px}th,td{border-bottom:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.links{margin:-12px 0 28px;font-size:15px}
+</style></head>
+<body><main><p class="kicker">Confidential client · high-level case study · Marco Alvarado</p><h1>Confidential Project — HIPAA-regulated health &amp; financial readiness platform</h1><p class="summary">Full-stack product engineering for a U.S. platform that helps older adults and their families get their health, financial, and legal information organized.</p><p class="links"><a href="https://github.com/7pixel-cl/confidential-platform-showcase">GitHub</a></p><dl class="meta"><div><dt>Role</dt><dd>Full-Stack Developer</dd></div><div><dt>Timeline</dt><dd>Nov 2025 – present</dd></div><div><dt>Stack</dt><dd>Next.js, React, TypeScript, tRPC, Drizzle, PostgreSQL, AWS, Playwright, Storybook</dd></div></dl>
+<h2>At a glance</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Role</strong></td>
+<td>Full-Stack Developer (remote, U.S. startup)</td>
+</tr>
+<tr>
+<td><strong>Timeline</strong></td>
+<td>November 2025 – present</td>
+</tr>
+<tr>
+<td><strong>Team</strong></td>
+<td>Founders + a small distributed engineering team</td>
+</tr>
+<tr>
+<td><strong>My footprint</strong></td>
+<td>Top contributor to the core monorepo — ~1,100+ of ~2,000 commits</td>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td>Health-tech / fin-tech, HIPAA-regulated, users 60+ and their caregivers</td>
+</tr>
+</tbody></table>
+<h2>The problem (in general terms)</h2>
+<p>When a health or family emergency happens, the information people need — identity documents, medical history, insurance, trusted contacts, accounts, and legal directives — is usually scattered across drawers, inboxes, and memories. The product guides older adults through short, structured steps to capture that information once, keep it current, and share it safely with the people they trust.</p>
+<p>Two constraints shape every engineering decision:</p>
+<ol>
+<li><strong>It handles protected health information (PHI).</strong> Security, auditability, and data minimization are requirements, not features.</li>
+<li><strong>The primary user is 60+.</strong> Every flow must be calm, legible, forgiving, and accessible — the opposite of a typical &quot;dense dashboard&quot; SaaS.</li>
+</ol>
+<h2>What I work on</h2>
+<ul>
+<li><strong>Guided multi-step product flows</strong> — end-to-end features (UI → typed API → database) for the step-by-step journeys at the heart of the product: capture, review, edit, and update, with merge rules so returning users never lose data they already saved.</li>
+<li><strong>Document AI pipeline</strong> — users upload photos/PDFs of real-world documents (including handwritten ones); a durable background-workflow pipeline parses them with a document-AI provider, maps the output to structured records, and routes low-confidence fields back to the user for confirmation.</li>
+<li><strong>Durable background workflows</strong> — event-driven jobs with retries, step-level idempotency, and long-running processing, so slow third-party calls never block the UI.</li>
+<li><strong>Accessible design system</strong> — contributed to the in-house component library built on accessible primitives, documented in Storybook with visual-regression checks in CI.</li>
+<li><strong>Senior-focused UX quality</strong> — ran heuristic audits (NN/g-style) and persona-driven Playwright end-to-end tests that simulate older users navigating the app, then turned findings into fixes.</li>
+<li><strong>Financial data features</strong> — flows that connect financial accounts through an aggregation API (sandbox personas for testing) and help users map where their money comes from and goes.</li>
+</ul>
+<h2>Architecture (high level)</h2>
+<pre class="mermaid">flowchart LR
+  U["Older adult / caregiver&lt;br/>(web, mobile-ready)"] --> W["Next.js 15 app&lt;br/>React 19 · Tailwind v4"]
+  W -->|"type-safe calls"| API["tRPC v11 API&lt;br/>Zod validation"]
+  API --> AUTH["Auth with MFA&lt;br/>(Better Auth)"]
+  API --> DB[("PostgreSQL on AWS&lt;br/>Drizzle ORM")]
+  API -->|"emit event"| WF["Durable workflows&lt;br/>retries · idempotent steps"]
+  WF --> DOC["Document-AI parsing&lt;br/>+ LLM inside the cloud boundary"]
+  WF --> FIN["Financial data&lt;br/>aggregation API"]
+  WF --> DB
+  subgraph Monorepo["Turborepo + pnpm monorepo"]
+    W
+    API
+    DS["Shared packages:&lt;br/>design system · db · validators · auth"]
+  end
+  IaC["Infrastructure as Code&lt;br/>(Pulumi, multi-account AWS)"] -. provisions .-> DB</pre><h2>Engineering practices on the project</h2>
+<ul>
+<li><strong>Compliance by design:</strong> HIPAA technical safeguards and SOC 2-style controls expressed as infrastructure code; encryption in transit and at rest; least-privilege, multi-account cloud setup; PHI never leaves the approved boundary — including when using LLMs.</li>
+<li><strong>End-to-end type safety:</strong> one TypeScript model from the database schema (Drizzle) through validators (Zod) and the API (tRPC) to the React UI.</li>
+<li><strong>Quality gates in CI:</strong> lint, format, typecheck, and unit tests on every PR; Playwright end-to-end suites (auth, navigation, responsive, smoke); Storybook visual-regression checks for the design system.</li>
+<li><strong>Monorepo at scale:</strong> ~1,800 TypeScript files across apps and shared packages, 130+ database migrations, ~190 test files.</li>
+<li><strong>AI-assisted delivery, with guardrails:</strong> I use AI coding agents daily, under explicit rules about what code and data they may touch in a regulated codebase.</li>
+</ul>
+<h2>What this project demonstrates</h2>
+<ul>
+<li>Shipping production features in a <strong>regulated, high-trust domain</strong> without slowing the team down.</li>
+<li>Turning messy real-world inputs (scanned and handwritten documents) into <strong>reliable structured data</strong> with human-in-the-loop review.</li>
+<li>Designing for <strong>accessibility and older users</strong> as a first-class engineering concern, verified with tests — not just good intentions.</li>
+<li>Working <strong>directly with non-technical founders</strong> and a distributed team, from fuzzy feedback (&quot;this feels overwhelming&quot;) to concrete, testable changes.</li>
+</ul>
+<hr>
+<p><strong>Source availability:</strong> This repository intentionally contains no code. The client&#39;s identity and product are confidential.<br><strong>Contact:</strong> <a href="https://www.linkedin.com/in/marcoalvaradot/">LinkedIn</a> · <a href="https://7pixel.cl">Portfolio</a> · <a href="https://github.com/7pixel-cl">GitHub</a></p>
+<p>© 2026 Marco Alvarado. All rights reserved.</p>
+
+<footer>© 2026 Marco Alvarado · <a href="https://github.com/7pixel-cl">github.com/7pixel-cl</a> · <a href="https://7pixel.cl">7pixel.cl</a></footer></main>
+<script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs";mermaid.initialize({startOnLoad:true,theme:"neutral"});</script>
+</body></html>
