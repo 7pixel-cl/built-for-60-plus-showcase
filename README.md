@@ -12,6 +12,8 @@
 ![Playwright](https://img.shields.io/badge/Playwright-2ead33?logo=playwright&logoColor=white)
 ![Storybook](https://img.shields.io/badge/Storybook-ff4785?logo=storybook&logoColor=white)
 
+**[Read the full case study online →](https://7pixel-cl.github.io/confidential-platform-showcase/)**
+
 > [!NOTE]
 > The client, product name, screens, and source code are under NDA. This page describes **my role and the engineering at a high level only** — no proprietary code, data, designs, or business details are published here. Happy to go deeper in a live conversation, within what the NDA allows.
 
