@@ -1,4 +1,4 @@
-# Confidential Project — HIPAA-Regulated Health & Financial Readiness Platform
+# Life Readiness — HIPAA-Regulated Health & Finance Platform (Confidential Client)
 
 **Full-stack product engineering for a U.S. platform that helps older adults and their families get their health, financial, and legal information organized.**
 
@@ -12,7 +12,7 @@
 ![Playwright](https://img.shields.io/badge/Playwright-2ead33?logo=playwright&logoColor=white)
 ![Storybook](https://img.shields.io/badge/Storybook-ff4785?logo=storybook&logoColor=white)
 
-**[Read the full case study online →](https://7pixel-cl.github.io/confidential-platform-showcase/)**
+**[Read the full case study online →](https://7pixel-cl.github.io/life-readiness-showcase/)**
 
 > [!NOTE]
 > The client, product name, screens, and source code are under NDA. This page describes **my role and the engineering at a high level only** — no proprietary code, data, designs, or business details are published here. Happy to go deeper in a live conversation, within what the NDA allows.
@@ -83,7 +83,7 @@ flowchart LR
 
 ---
 
-**Source availability:** This repository intentionally contains no code. The client's identity and product are confidential.  
+**Source availability:** This repository intentionally contains no code. "Life Readiness" is a descriptive project name for this showcase, not the product's real name; the client and product are confidential.  
 **Contact:** [LinkedIn](https://www.linkedin.com/in/marcoalvaradot/) · [Portfolio](https://7pixel.cl) · [GitHub](https://github.com/7pixel-cl)
 
 © 2026 Marco Alvarado. All rights reserved.
