@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Life Readiness: case study by Marco Alvarado</title>
-<meta name="description" content="Full-stack product engineering on a regulated U.S. startup's core platform: guided capture flows, a document-AI pipeline on durable background workflows, and accessible UI built for users over 60.">
+<title>Built for 60+: case study by Marco Alvarado</title>
+<meta name="description" content="Full-stack product engineering for a U.S. startup whose users are older adults: senior-first UI on an accessible design system, guided flows, and a document-AI pipeline, all checked with measured audits and persona-based tests.">
 <meta name="author" content="Marco Alvarado">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Life Readiness: A HIPAA-regulated platform that helps older adults get their health, money, and legal affairs in order">
-<meta property="og:description" content="Full-stack product engineering on a regulated U.S. startup's core platform: guided capture flows, a document-AI pipeline on durable background workflows, and accessible UI built for users over 60.">
-<meta property="og:url" content="https://7pixel-cl.github.io/life-readiness-showcase/">
+<meta property="og:title" content="Built for 60+: A HIPAA-regulated health and finance platform designed, from type scale to test suite, for adults aged 60 to 85">
+<meta property="og:description" content="Full-stack product engineering for a U.S. startup whose users are older adults: senior-first UI on an accessible design system, guided flows, and a document-AI pipeline, all checked with measured audits and persona-based tests.">
+<meta property="og:url" content="https://7pixel-cl.github.io/built-for-60-plus-showcase/">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
@@ -210,65 +210,88 @@ code{font:400 .8em/1 var(--mono);background:var(--paper-2);border:1px solid var(
 
   <main>
   <div class="tb grid">
-    <p class="tb-meta"><span><b>Case study 03</b> / 05</span><span>Health-tech · NDA</span><span>2025 – present</span><span>Full-Stack Developer</span></p>
-    <h1 class="name">Life Readiness</h1>
+    <p class="tb-meta"><span><b>Case study 03</b> / 05</span><span>Health-tech · Accessibility · NDA</span><span>2025 – present</span><span>Full-Stack Developer</span></p>
+    <h1 class="name">Built for 60+</h1>
     <div class="lede">
-      <p class="thesis">A HIPAA-regulated platform that helps older adults get their health, money, and legal affairs in order</p>
-      <p class="summary">Full-stack product engineering on a regulated U.S. startup's core platform: guided capture flows, a document-AI pipeline on durable background workflows, and accessible UI built for users over 60.</p>
-      <p class="go"><a href="https://github.com/7pixel-cl/life-readiness-showcase">Repository on GitHub<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></p>
+      <p class="thesis">A HIPAA-regulated health and finance platform designed, from type scale to test suite, for adults aged 60 to 85</p>
+      <p class="summary">Full-stack product engineering for a U.S. startup whose users are older adults: senior-first UI on an accessible design system, guided flows, and a document-AI pipeline, all checked with measured audits and persona-based tests.</p>
+      <p class="go"><a href="https://github.com/7pixel-cl/built-for-60-plus-showcase">Repository on GitHub<svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></p>
       <p class="nda">The client, product name, screens, and source code are under NDA. This page describes my role and the engineering at a high level only. I’m happy to go deeper in a conversation, within what the NDA allows.</p>
     </div>
-    <dl class="sheet"><div><dt>Role</dt><dd>Full-Stack Developer (remote, U.S. startup)</dd></div><div><dt>Timeline</dt><dd>November 2025 – present</dd></div><div><dt>Team</dt><dd>Founders + a small distributed engineering team</dd></div><div><dt>Domain</dt><dd>Health-tech / fin-tech, HIPAA-regulated, users 60+ and their caregivers</dd></div></dl>
-    <div class="figs"><div><strong>1,100+</strong><span>of ~2,000 commits are mine</span></div><div><strong>1,800</strong><span>TypeScript files in the monorepo</span></div><div><strong>130+</strong><span>database migrations</span></div><div><strong>190</strong><span>test files</span></div></div>
+    <dl class="sheet"><div><dt>Users</dt><dd>Adults aged 60 to 85, and the family members they trust</dd></div><div><dt>Role</dt><dd>Full-Stack Developer (remote, U.S. startup)</dd></div><div><dt>Timeline</dt><dd>November 2025 to present</dd></div><div><dt>Team</dt><dd>Founders and a small distributed engineering team</dd></div><div><dt>Domain</dt><dd>Health-tech and fin-tech, HIPAA-regulated</dd></div></dl>
+    <div class="figs"><div><strong>60–85</strong><span>age range of the people it serves</span></div><div><strong>56px</strong><span>minimum touch target</span></div><div><strong>16px</strong><span>smallest text anywhere in the UI</span></div><div><strong>200%</strong><span>zoom with no sideways scrolling</span></div></div>
     
   </div>
 
   <div class="body">
-<section id="the-problem-in-general-terms" class="sec "><header class="sec-h"><span class="sec-n">01</span><h2>The problem (in general terms)</h2></header><div class="sec-b"><p>When a health or family emergency happens, the information people need — identity documents, medical history, insurance, trusted contacts, accounts, and legal directives — is usually scattered across drawers, inboxes, and memories. The product guides older adults through short, structured steps to capture that information once, keep it current, and share it safely with the people they trust.</p>
-<p>Two constraints shape every engineering decision:</p>
-<ol>
-<li><strong>It handles protected health information (PHI).</strong> Security, auditability, and data minimization are requirements, not features.</li>
-<li><strong>The primary user is 60+.</strong> Every flow must be calm, legible, forgiving, and accessible — the opposite of a typical &quot;dense dashboard&quot; SaaS.</li>
-</ol>
+<section id="who-it-s-for" class="sec "><header class="sec-h"><span class="sec-n">01</span><h2>Who it's for</h2></header><div class="sec-b"><p>The product helps older adults gather the information their families would need in an emergency: identity documents, medical history, insurance, accounts, legal wishes, and the people they trust. It walks them through short, guided steps to record that information and keep it up to date, then helps them share it safely.</p>
+<p>The users are 60 to 85, and that shapes everything. Many read with reading glasses at the largest text size. Some have tremor or arthritis and tap where a button <em>was</em> a moment ago. Many are not confident with technology and worry about breaking something.</p>
+<p>A typical SaaS interface fails all of them: small grey text, icon-only buttons, layouts that shift, modals, and ten options on one screen. Making the product calm, legible, and forgiving is the core requirement, not a polish pass.</p>
 </div></section>
-<section id="what-i-work-on" class="sec "><header class="sec-h"><span class="sec-n">02</span><h2>What I work on</h2></header><div class="sec-b"><ul>
-<li><strong>Guided multi-step product flows</strong> — end-to-end features (UI → typed API → database) for the step-by-step journeys at the heart of the product: capture, review, edit, and update, with merge rules so returning users never lose data they already saved.</li>
-<li><strong>Document AI pipeline</strong> — users upload photos/PDFs of real-world documents (including handwritten ones); a durable background-workflow pipeline parses them with a document-AI provider, maps the output to structured records, and routes low-confidence fields back to the user for confirmation.</li>
-<li><strong>Durable background workflows</strong> — event-driven jobs with retries, step-level idempotency, and long-running processing, so slow third-party calls never block the UI.</li>
-<li><strong>Accessible design system</strong> — contributed to the in-house component library built on accessible primitives, documented in Storybook with visual-regression checks in CI.</li>
-<li><strong>Senior-focused UX quality</strong> — ran heuristic audits (NN/g-style) and persona-driven Playwright end-to-end tests that simulate older users navigating the app, then turned findings into fixes.</li>
-<li><strong>Financial data features</strong> — flows that connect financial accounts through an aggregation API (sandbox personas for testing) and help users map where their money comes from and goes.</li>
+<section id="designing-for-older-adults" class="sec points"><header class="sec-h"><span class="sec-n">02</span><h2>Designing for older adults</h2></header><div class="sec-b"><ol class="points"><li><span class="pn">2.1</span><h3>Hard limits built into the design system</h3><p>The shared component library enforces minimums for older users:</p>
+<ul>
+<li><strong>Text:</strong> body text is at least 18px, long-form reading at least 20px, and nothing in the interface is smaller than 16px.</li>
+<li><strong>Touch:</strong> targets are at least 56px tall, with clear gaps between them.</li>
+<li><strong>Scaling:</strong> all type is rem-based, so it follows the user&#39;s own size settings. Layouts must hold up at <strong>200% zoom on a 320px-wide screen</strong> with no sideways scrolling or clipped controls (WCAG 1.4.10).</li>
+</ul>
+<p>Components are built on accessible React Aria primitives and documented in Storybook, so these limits ship by default.</p>
+</li><li><span class="pn">2.2</span><h3>Color that works for aging eyes</h3><p>Contrast is measured, not eyeballed. Small text never uses low-contrast accent colors.</p>
+<p>Aging eyes struggle to tell apart shades within blue and purple, or within yellow and green. So two states never differ only by hue. Every status also carries a distinct shape and a plain-word label, with a clear gap in lightness.</p>
+</li><li><span class="pn">2.3</span><h3>Layouts that stay still</h3><p>Older users aim where a control <em>was</em>, so movement causes errors. We designed against that:</p>
+<ul>
+<li>Text-size controls stay in fixed slots as text grows.</li>
+<li>Error messages keep their space reserved, so buttons don&#39;t jump.</li>
+<li>Forms show a loading state instead of empty fields until saved answers arrive. Persona testing showed that blank fields invite retyping and duplicated data.</li>
+<li>Animation is limited to functional progress, with no decorative motion.</li>
+</ul>
+</li><li><span class="pn">2.4</span><h3>One clear next step, in plain words</h3><ul>
+<li>One main action per screen.</li>
+<li>Progress shown in words (&quot;Step 3 of 10&quot;), not dots.</li>
+<li>A written scroll cue when something important sits below the fold.</li>
+<li>A Back button that is always present.</li>
+<li>Destructive actions kept away from primary ones.</li>
+<li>Long tasks on full pages instead of modals.</li>
+<li>A human route to help (a phone line and opening hours), not only a chat box.</li>
+</ul>
+</li><li><span class="pn">2.5</span><h3>Measured, not assumed</h3><p>I ran <strong>screen-by-screen accessibility audits</strong> that measured contrast ratios and target sizes, and reviews against Nielsen Norman Group&#39;s guidance for senior users. I also wrote <strong>persona-driven Playwright tests</strong> that model an older user with reading glasses at maximum text size, mild arthritis, and low confidence with technology.</p>
+<p>Each finding was turned into a prioritized, verifiable fix. Two examples:</p>
+<ul>
+<li>A text-size button that moved under the pointer.</li>
+<li>A sign-in error that disappeared as the user typed, pushing the button away from where they were aiming.</li>
+</ul>
+</li></ol></div></section>
+<section id="what-i-work-on" class="sec "><header class="sec-h"><span class="sec-n">03</span><h2>What I work on</h2></header><div class="sec-b"><ul>
+<li><strong>Senior-first UI, end to end:</strong> guided multi-step flows (capture, review, edit, update) built on the accessible component library. Merge rules make sure returning users never lose data they already saved.</li>
+<li><strong>Accessibility quality:</strong> the audits and persona tests above, plus contributions to the design system and its visual-regression checks in CI.</li>
+<li><strong>Document AI pipeline:</strong> users photograph or upload real-world documents, some handwritten. A background-workflow pipeline parses them with a document-AI provider and maps the results to structured records. Uncertain fields go back to the user to confirm, in plain language.</li>
+<li><strong>Durable background workflows:</strong> event-driven jobs with retries and idempotent steps, so slow third-party calls never block or confuse the interface.</li>
+<li><strong>Financial data features:</strong> flows that connect financial accounts through an aggregation API (tested with sandbox personas) and show users, simply, where their money comes from and goes.</li>
 </ul>
 </div></section>
-<section id="architecture-high-level" class="sec "><header class="sec-h"><span class="sec-n">03</span><h2>Architecture (high level)</h2></header><div class="sec-b"><figure class="diagram"><div class="diagram-canvas"><pre class="mermaid">flowchart TD
-  U[&quot;Older adult / caregiver&lt;br/&gt;(web, mobile-ready)&quot;] --&gt; W[&quot;Next.js 15 app&lt;br/&gt;React 19 · Tailwind v4&quot;]
+<section id="architecture-high-level" class="sec "><header class="sec-h"><span class="sec-n">04</span><h2>Architecture (high level)</h2></header><div class="sec-b"><figure class="diagram"><div class="diagram-canvas"><pre class="mermaid">flowchart TD
+  U[&quot;Adult 60–85 / family member&lt;br/&gt;(large text, touch, zoom)&quot;] --&gt; W[&quot;Next.js 15 app&lt;br/&gt;React 19 · Tailwind v4&quot;]
+  W --&gt; DS[&quot;Accessible design system&lt;br/&gt;React Aria · Storybook&quot;]
   W --&gt;|&quot;type-safe calls&quot;| API[&quot;tRPC v11 API&lt;br/&gt;Zod validation&quot;]
-  API --&gt; AUTH[&quot;Auth with MFA&lt;br/&gt;(Better Auth)&quot;]
+  API --&gt; AUTH[&quot;Auth with MFA&quot;]
   API --&gt; DB[(&quot;PostgreSQL on AWS&lt;br/&gt;Drizzle ORM&quot;)]
   API --&gt;|&quot;emit event&quot;| WF[&quot;Durable workflows&lt;br/&gt;retries · idempotent steps&quot;]
   WF --&gt; DOC[&quot;Document-AI parsing&lt;br/&gt;+ LLM inside the cloud boundary&quot;]
   WF --&gt; FIN[&quot;Financial data&lt;br/&gt;aggregation API&quot;]
   WF --&gt; DB
-  subgraph Monorepo[&quot;Turborepo + pnpm monorepo&quot;]
-    W
-    API
-    DS[&quot;Shared packages:&lt;br/&gt;design system · db · validators · auth&quot;]
-  end
   IaC[&quot;Infrastructure as Code&lt;br/&gt;(Pulumi, multi-account AWS)&quot;] -. provisions .-&gt; DB</pre></div><figcaption><span>Fig. 1</span>Architecture (high level). Simplified for a public audience.</figcaption></figure>
 </div></section>
-<section id="engineering-practices-on-the-project" class="sec "><header class="sec-h"><span class="sec-n">04</span><h2>Engineering practices on the project</h2></header><div class="sec-b"><ul>
-<li><strong>Compliance by design:</strong> HIPAA technical safeguards and SOC 2-style controls expressed as infrastructure code; encryption in transit and at rest; least-privilege, multi-account cloud setup; PHI never leaves the approved boundary — including when using LLMs.</li>
-<li><strong>End-to-end type safety:</strong> one TypeScript model from the database schema (Drizzle) through validators (Zod) and the API (tRPC) to the React UI.</li>
-<li><strong>Quality gates in CI:</strong> lint, format, typecheck, and unit tests on every PR; Playwright end-to-end suites (auth, navigation, responsive, smoke); Storybook visual-regression checks for the design system.</li>
-<li><strong>Monorepo at scale:</strong> ~1,800 TypeScript files across apps and shared packages, 130+ database migrations, ~190 test files.</li>
-<li><strong>AI-assisted delivery, with guardrails:</strong> I use AI coding agents daily, under explicit rules about what code and data they may touch in a regulated codebase.</li>
+<section id="engineering-practices" class="sec "><header class="sec-h"><span class="sec-n">05</span><h2>Engineering practices</h2></header><div class="sec-b"><ul>
+<li><strong>Compliance by design:</strong> HIPAA technical safeguards are expressed as infrastructure code. Data is encrypted in transit and at rest, cloud access is least-privilege across multiple accounts, and protected health information never leaves the approved boundary, including when LLMs are involved.</li>
+<li><strong>End-to-end type safety:</strong> a single TypeScript model runs from the database schema (Drizzle) through the validators (Zod) and the API (tRPC) to the React UI.</li>
+<li><strong>Quality gates in CI:</strong> every PR runs lint, format, typecheck, and unit tests. Playwright end-to-end suites cover auth, navigation, responsive layouts, smoke tests, and senior personas. Storybook visual-regression checks guard the design system.</li>
+<li><strong>Scale:</strong> ~1,800 TypeScript files across apps and shared packages, 130+ database migrations, and ~190 test files.</li>
 </ul>
 </div></section>
-<section id="what-this-project-demonstrates" class="sec "><header class="sec-h"><span class="sec-n">05</span><h2>What this project demonstrates</h2></header><div class="sec-b"><ul>
+<section id="what-this-project-demonstrates" class="sec "><header class="sec-h"><span class="sec-n">06</span><h2>What this project demonstrates</h2></header><div class="sec-b"><ul>
+<li>Building a product where <strong>accessibility for older adults is the main requirement</strong>: enforced in the design system, measured in audits, and verified in tests.</li>
 <li>Shipping production features in a <strong>regulated, high-trust domain</strong> without slowing the team down.</li>
-<li>Turning messy real-world inputs (scanned and handwritten documents) into <strong>reliable structured data</strong> with human-in-the-loop review.</li>
-<li>Designing for <strong>accessibility and older users</strong> as a first-class engineering concern, verified with tests — not just good intentions.</li>
-<li>Working <strong>directly with non-technical founders</strong> and a distributed team, from fuzzy feedback (&quot;this feels overwhelming&quot;) to concrete, testable changes.</li>
+<li>Turning messy real-world inputs, like scanned and handwritten documents, into <strong>reliable structured data</strong>, with a person reviewing anything uncertain.</li>
+<li>Turning vague feedback (&quot;this feels overwhelming&quot;) into <strong>specific, testable changes</strong>, working directly with non-technical founders.</li>
 </ul>
 </div></section>
   </div>
@@ -279,7 +302,7 @@ code{font:400 .8em/1 var(--mono);background:var(--paper-2);border:1px solid var(
     <ol class="rows">
       <li><a href="https://7pixel-cl.github.io/profeia-showcase/"><span class="n">01</span><span class="t">ProfeIA</span><span class="d">Exam prep with spaced repetition and a Socratic AI tutor that won’t leak answers.</span><span class="k">EdTech · AI</span><svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
       <li><a href="https://7pixel-cl.github.io/vytera-showcase/"><span class="n">02</span><span class="t">Vytera</span><span class="d">AI-powered real estate CRM with an omnichannel inbox and human-controlled AI.</span><span class="k">PropTech · AI</span><svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
-      <li><div class="here" aria-current="page"><span class="n">03</span><span class="t">Life Readiness</span><span class="d">HIPAA-regulated health and finance platform for older adults and their families (NDA).</span><span class="k">Health-tech · NDA</span><svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></div></li>
+      <li><div class="here" aria-current="page"><span class="n">03</span><span class="t">Built for 60+</span><span class="d">Health and finance platform for adults 60–85, with senior-first UX enforced in code (NDA).</span><span class="k">Health-tech · Accessibility · NDA</span><svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></div></li>
       <li><a href="https://7pixel-cl.github.io/apr-showcase/"><span class="n">04</span><span class="t">APR</span><span class="d">Offline-first billing SaaS for Chile’s rural water utilities.</span><span class="k">GovTech · Utilities</span><svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
       <li><a href="https://7pixel-cl.github.io/docuhr-showcase/"><span class="n">05</span><span class="t">DocuHR</span><span class="d">Labor-compliance documents with AI expiry extraction and alerts.</span><span class="k">HR · Compliance · AI</span><svg class="ar" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a></li>
     </ol>
