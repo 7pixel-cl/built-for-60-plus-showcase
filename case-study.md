@@ -3,7 +3,7 @@ title: "Life Readiness — A HIPAA-regulated platform that helps older adults ge
 date: 2026-11-03
 role: "Full-Stack Developer"
 stack: ["Next.js","React","TypeScript","tRPC","Drizzle","PostgreSQL","AWS","Playwright","Storybook"]
-summary: "Full-stack product engineering for a U.S. platform that helps older adults and their families get their health, financial, and legal information organized."
+summary: "Full-stack product engineering on a regulated U.S. startup's core platform: guided capture flows, a document-AI pipeline on durable background workflows, and accessible UI built for users over 60."
 ---
 # Life Readiness — HIPAA-Regulated Health & Finance Platform (Confidential Client)
 
